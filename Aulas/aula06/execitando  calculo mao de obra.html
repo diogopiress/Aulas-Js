@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de Mão de obra</title>
+</head>
+<body>
+    <script>
+        window.alert('Esta pagina calcula a mão de obra direta')
+        var valorsalario = Number(window.prompt('Digite o total de salarios dos funcionarios: '))
+        var encargossociais = Number(window.prompt('Digite os encargos sociais:'))
+        var numeroempregados = Number(window.prompt('Digite a quantidade de empregados:'))
+        var horas = Number(window.prompt('Digite a carga horaia mensal - 160 ou 220 horas:'))
+        var custohora = (valorsalario + encargossociais) / (numeroempregados * horas)
+        document.write('Custo da Mão de obra Direta: ' + custohora.toFixed(2)) //monstrar so duas casas decimais no casso do resultato ser uma dizima
+
+    </script>
+</body>
+</html>
