@@ -17,8 +17,27 @@
     <h1> Iniciandos primeiros passos com o DOM </h1>
     <p>Aqui vai o resultado</p>
     <p>Aprendendo a usar o <strong>DOM</strong></p>
-    <div>Clique em mim</div>
+    <div id="msg">Clique em mim</div>
     <script>
+        //window.document.write('ola mundo') //monstra no body 
+        //window.document.write(window.document.charset)//busca o charset que é UTF-8
+        //window.document.write(window.navigator.appName) //monstra o navegador que utiliza
+        //window.document.write(window.document.URL) //monstra a url que utilizo
+
+        /*selecionando objetos usando metodos de seleção
+        Metodo por Marca*/
+        var p1 = window.document.getElementsByTagName('p')[0]
+        //window.document.write('Esta escrito assim: ' + p1.innerText)
+        p1.style.color = 'green'
+        //Metodo por ID
+        var d = window.document.getElementById('msg')
+        /* d.style.background = "black"
+        d.innerText = "estou aguardando..." // mudando texto por java script usando o DOM
+        window.document.getElementById('msg').innerText = "ola" // outra forma de mudar o texto */
+
+        /*Metodo por Seletor*/    
+        var d = window.document.querySelector("div#msg")
+        d.style.color = "blue"
 
     </script>
 </body>
