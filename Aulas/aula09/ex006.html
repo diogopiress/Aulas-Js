@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exeritando o DOM</title>
+    <style>
+        body {
+            background: grey;
+            color: rgb(97, 29, 63);
+            font: normal 20pt arial;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Passos com o DOM</h1>
+    <p class="para1" name="teste" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, voluptate provident voluptates, veniam nisi inventore facere accusantium officia tenetur unde laudantium itaque blanditiis at vel. Saepe officiis deleniti similique earum!</p>
+    <p>Vamos usar o <strong>DOM</strong> e seus metodos</p>
+    <div id="msg">clique em mim</div>    
+    <script>
+        /*usando o metodo por ID*/
+        var d = window.document.getElementById('msg')
+        d.innerText = 'proximo metodo'
+        d.style.color = "black"
+        /*usand o metodo por TagName*/
+        var e = window.document.getElementsByTagName("p")[0]
+        e.style.color = "blue"
+        /*usando o metodo por Classe*/ 
+        var f = window.document.querySelector("p#para1")
+        f.innerText = "Mudando o texto usando o metodo por Classe"
+    </script>
+</body>
+
+</html>
