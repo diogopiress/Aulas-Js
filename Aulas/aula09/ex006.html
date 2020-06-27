@@ -14,21 +14,36 @@
 </head>
 
 <body>
-    <h1> Passos com o DOM</h1>
+    <h1 id="tes" > Passos com o DOM</h1>
     <p class="para1" name="teste" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, voluptate provident voluptates, veniam nisi inventore facere accusantium officia tenetur unde laudantium itaque blanditiis at vel. Saepe officiis deleniti similique earum!</p>
     <p>Vamos usar o <strong>DOM</strong> e seus metodos</p>
-    <div id="msg">clique em mim</div>    
+    <div id="msg">clique em mim</div> 
+    <div name="msg1">teste por name 2</div>   
+    <div id="msg2" class="msg3">teste por seletor</div>
     <script>
         /*usando o metodo por ID*/
         var d = window.document.getElementById('msg')
         d.innerText = 'proximo metodo'
         d.style.color = "black"
-        /*usand o metodo por TagName*/
+        d.style.background = "pink"
+        /*usando o metodo por Marca*/
         var e = window.document.getElementsByTagName("p")[0]
         e.style.color = "blue"
+        //usando o metodo por Name
+        var f = window.document.getElementsByName("msg1")[0]
+        f.innerText = "teste by name88888"
+        f.style.background = "black"
+
         /*usando o metodo por Classe*/ 
-        var f = window.document.querySelector("p#para1")
-        f.innerText = "Mudando o texto usando o metodo por Classe"
+        var f = window.document.getElementsByClassName("para1")[0]
+        f.style.background = 'orange'
+
+        /*usando o metodo por Seletor
+           # representa ID e . representa Classe*/
+        var g = window.document.querySelector('h1#tes')
+        g.style.background = 'red'
+        var h = window.document.querySelector('p.para1')
+        h.innerText = "retirei o lorem"
     </script>
 </body>
 
