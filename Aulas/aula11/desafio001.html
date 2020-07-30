@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual pais??</title>
+</head>
+<body>
+    <h1>Verificar nacionalidade brasileira</h1>
+    Digite o pais: <input type="text" class="regiao" id="pais">
+    <input type="button" value="Verificar" onclick="checar()">
+    <div id="resposta"></div>
+
+    <script>
+        function checar(){
+            var pais = window.document.querySelector('input#pais')
+            var res = window.document.querySelector('div#resposta')
+            var regiao = pais.value
+            res.innerHTML = `Voce e vive: ${regiao} `
+            if (regiao != 'brasil'){
+                res.innerHTML += "<p>Você é Estrangeiro</p>"
+            }else{
+                res.innerHTML += "<p>Você é Brasileiro</p>"
+            }
+
+        
+        }
+
+    </script>
+
+
+    
+</body>
+</html>
