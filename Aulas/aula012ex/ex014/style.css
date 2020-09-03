@@ -19,8 +19,9 @@ section {
 
 }
 
-section:hover{
-    color: blue
+div {
+    text-align: center;
+    padding: 5px;
 }
 
 footer {
